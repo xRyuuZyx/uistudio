@@ -1,0 +1,29 @@
+prefix: "<gray>[<gold>UI</gold>]</gray> "
+click-cooldown-ms: 150
+
+# ============ RESOURCE PACK ============
+# UIStudio membuat pack sendiri dari folder images/, icons/, models/ lalu mengirimnya ke pemain.
+pack:
+  # SELF_HOST = server membuka port HTTP sendiri (butuh port terbuka)
+  # URL       = kamu upload pack ke tempat lain (GitHub dll), isi 'url' di bawah
+  # NEXO      = salin ke plugins/Nexo/pack/external_packs (Nexo yang mengirim)
+  # NONE      = tidak mengirim apa-apa (kamu atur sendiri)
+  delivery: SELF_HOST
+  format: 75                  # pack_format untuk Minecraft 1.21.11
+  hide-bossbar-sprites: true  # sembunyikan bar boss bawaan (berlaku untuk SEMUA boss bar)
+  required: false
+  prompt: "<gold>UIStudio</gold> membutuhkan resource pack"
+  self-host:
+    public-host: "127.0.0.1"  # GANTI ke IP/domain server yang bisa diakses pemain
+    port: 8083                # port TCP yang terbuka di hosting
+  url: ""                     # dipakai kalau delivery: URL
+  sha1: ""                    # opsional; kosong = dihitung dari file lokal
+
+# ============ HUD ============
+hud:
+  interval-ticks: 5
+  auto: [main]                # HUD yang otomatis tampil saat join
+
+messages:
+  no-screen: "<red>Layar <white>%screen%</white> tidak ditemukan."
+  no-permission: "<red>Kamu tidak punya izin membuka ini."
